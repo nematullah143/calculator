@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+		.cen{
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			margin-top: 60px;
+		}
+		form{
+			background: gray;
+			padding: 7px;
+			border-radius: 4px;
+		}
+		button{
+			height: 50px;
+			width: 45px;
+			margin: 2px 2px 2px 2px;
+			background: lightskyblue;
+			border-radius: 10px;
+		}
+		input{
+			text-align: right;
+			height: 45px;
+			width: 197px;
+			font-size: 22px;
+			background: lightskyblue;
+			border-radius: 8px;
+		}
+	</style>
+</head>
+<body>
+	<div class="cen">
+		<form class="display" name="display">
+			<div class="item" name="item">
+				<input type="text"name="item">
+			</div>
+			<div>
+				<button type="button" onclick="item.value += '%'">%</button>
+				<button type="button" onclick="item.value = ''">CE</button>
+				<button type="button" onclick="item.value = item.value.toString().slice(0,-1)">C</button>
+				<button type="button" onclick="item.value += '/'">/</button>
+				<!-- <input type="button" value="5" name="num5" onclick="item.value = '5'">-->
+			</div>
+			<div>
+				<button type="button" onclick="item.value += '7'">7</button>
+				<button type="button" onclick="item.value += '8'">8</button>
+				<button type="button" onclick="item.value += '9'">9</button>
+				<button type="button" onclick="item.value += '*'">X</button>
+			</div>
+				<button type="button" onclick="item.value += '4'">4</button>
+				<button type="button" onclick="item.value += '5'">5</button>
+				<button type="button" onclick="item.value += '6'">6</button>
+				<button type="button" onclick="item.value += '-'">-</button>
+			<br>
+			<button type="button" onclick="item.value += '1'">1</button>
+			<button type="button" onclick="item.value += '2'">2</button>
+			<button type="button" onclick="item.value += '3'">3</button>
+			<button type="button" onclick="item.value += '+'">+</button>
+			<br>
+			<button type="button" onclick="item.value += '00'">00</button>
+			<button type="button" onclick="item.value += '0'">0</button>
+			<button type="button" onclick="item.value += '.'">.</button>
+			<button type="button" onclick="item.value = eval(item.value)">=</button>
+			<br>
+		</div>
+	</form>
+
+</body>
+<script type="text/javascript">
+	/*function cul(){
+		i = document.getElementsByTagName('button').innerHTML;
+		document.getElementById('input').value = i;
+	}*/  
+</script>
+</html>
